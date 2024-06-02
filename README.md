@@ -1871,6 +1871,7 @@
         Collectors.partitioningBy(s -> s.length() <= 5));
     System.out.println(map); // {false=[tigers], true=[lions, bears]}
     ```
+1. The Collector created by Collectors.toMap throws java.lang.IllegalStateException if an attempt is made to store a key that already exists in the Map. If you want to collect items in a Map and if you expect duplicate entries in the source, you should use Collectors.toMap(Function, Function, BinaryOperator) method. The third parameter is used to merge the duplicate entries to produce one entry. For example, in this case, you can do: Collectors.toMap(b->b.getTitle(), b->b.getPrice(), (v1, v2)->v1+v2) This Collector will sum the values of the entries that have
 
 ### Exceptions, Assertions, and Localization
 

@@ -1920,7 +1920,12 @@
     var f = DateTimeFormatter.ofPattern("MMMM dd, yyyy 'at' hh:mm");
     System.out.println(dt.format(f)); // October 20, 2020 at 11:12
     ```
-
+1.  DateTimeFormatter.ofPattern(""). If you use the same pattern 3 times it print the short form. So, this will print Sat and Jan. same pattern more than 5 times it will thrown an exception. To print the full form of the component, use the pattern 4 times.
+   ```java
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("eeee d'st day of' MMMM yyyy");
+    String s = dtf.format(LocalDate.now());
+    System.out.println(s);//Saturday 1st day of January 2000| 星期日 2st day of 6月 2024
+    ```
 1. Supported symbols for each date and time class are shown below:
     <p align="center">
         <img src="res/table5.6.JPG">

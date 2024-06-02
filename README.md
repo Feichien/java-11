@@ -1568,13 +1568,13 @@
     ```
 
 1. An Optional type is used to express a result that could be "not applicable" without using null references. The Optional instance methods are summarised below:
-2. The *of(T t) will throw NullPointerException if you pass null. If you want to avoid NullPointerException, you should use *.ofNullable(T t) method. This will return Optional.empty if you pass null.
-3. You cannot change the contents of Optional object after creation
     <p align="center">
         <img src="res/table4.3.JPG">
     </p>
 
-5. An example using the *isPresent()* and *get()* methods is shown below:
+5. The *of(T t) will throw NullPointerException if you pass null. If you want to avoid NullPointerException, you should use *.ofNullable(T t) method. This will return Optional.empty if you pass null.
+6. You cannot change the contents of Optional object after creation
+7. An example using the *isPresent()* and *get()* methods is shown below:
     ```java
     public static Optional<Double> average(int... scores){
         if(scores.length == 0) return Optional.empty();

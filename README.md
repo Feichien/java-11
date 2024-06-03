@@ -1134,6 +1134,11 @@
     <p align="center">
         <img src="res/table2.6.JPG">
     </p>
+1. @SuppressWarnings can be used: CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, MODULE, PARAMETER,TYPE.
+2. @Override can only be used on instance methods.
+3. @SafeVarargs can be used on constructors and methods.
+4. @Deprecated can be a CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, MODULE, PARAMETER,TYPE.
+   
 
 ### Generics and Collections
 
